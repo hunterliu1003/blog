@@ -28,9 +28,14 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/style/app.styl'
-  ],
+    '@/assets/style/reset.styl',
 
+    /* vuetify start */
+    '@/assets/style/app.styl',
+    /* vuetify end */
+
+    '@/assets/style/base.styl',
+  ],
   /*
   ** Plugins to load before mounting the App
   */
