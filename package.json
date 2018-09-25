@@ -1,7 +1,7 @@
 {
   "name": "blog",
   "version": "1.0.0",
-  "description": "My first-class Nuxt.js project",
+  "description": "My Nuxt Blog",
   "author": "Hunter",
   "private": true,
   "scripts": {
@@ -13,18 +13,18 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0",
-    "express": "^4.15.3",
-    "vuetify": "^1.0.19"
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.0.0",
+    "express": "^4.16.3",
+    "vuetify": "^1.2.4"
   },
   "devDependencies": {
-    "cross-env": "^5.0.1",
+    "nodemon": "^1.11.0",
     "babel-eslint": "^8.2.1",
     "eslint": "^5.0.1",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.0.0",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1",
-    "nodemon": "^1.11.0"
+    "stylus-loader": "^3.0.2"
   }
 }

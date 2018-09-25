@@ -1,7 +1,5 @@
 const pkg = require('./package')
 
-const nodeExternals = require('webpack-node-externals')
-
 module.exports = {
   mode: 'universal',
 
@@ -30,7 +28,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    'vuetify/src/stylus/main.styl'
+    '~/assets/style/app.styl'
   ],
 
   /*
@@ -62,13 +60,6 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
-      }
-      if (ctx.isServer) {
-        config.externals = [
-          nodeExternals({
-            whitelist: [/^vuetify/]
-          })
-        ]
       }
     }
   }

@@ -1,6 +1,6 @@
 # blog
 
-> My first-class Nuxt.js project
+> My Nuxt Blog
 
 ## Build Setup
 
