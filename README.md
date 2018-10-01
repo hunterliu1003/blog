@@ -8,7 +8,7 @@
 # install dependencies
 $ npm install
 
-# serve with hot reload at localhost:3000
+# serve with hot reload at localhost:8787
 $ npm run dev
 $ npm run storybook
 
