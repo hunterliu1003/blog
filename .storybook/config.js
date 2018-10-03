@@ -2,8 +2,14 @@ import { configure } from '@storybook/vue'
 import { setOptions } from '@storybook/addon-options'
 import Vue from 'vue'
 import Vuex from 'vuex'
+import Vuetify from 'vuetify'
+import theme from '@/vuetify.config.js'
 
 Vue.use(Vuex)
+
+Vue.use(Vuetify, {
+  theme
+})
 
 Vue.component('nuxt-link', {
   // functional: true,
@@ -27,6 +33,9 @@ Vue.component('no-ssr', {
 
 /* start Css resources */
 import '!!style-loader!css-loader!stylus-loader!../assets/style/reset.styl'
+
+import '!!style-loader!css-loader!stylus-loader!../assets/style/app.styl'
+
 import '!!style-loader!css-loader!stylus-loader!../assets/style/base.styl'
 /* end Css resources */
 
