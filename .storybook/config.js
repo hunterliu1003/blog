@@ -6,8 +6,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 Vue.component('nuxt-link', {
-  // functional: true,
-  render (createElement, context) {
+  functional: true,
+  render: function (createElement, context) {
     let allClass = {}
     let arrClass = context.data.staticClass
       ? context.data.staticClass.split(' ')
@@ -19,7 +19,7 @@ Vue.component('nuxt-link', {
   }
 })
 Vue.component('no-ssr', {
-  // functional: true,
+  functional: true,
   render (createElement, context) {
     return context.children
   }
