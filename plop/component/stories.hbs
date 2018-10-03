@@ -2,17 +2,17 @@ import Vue from 'vue'
 
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import centered from '@storybook/addon-centered'
 import { withReadme }  from 'storybook-readme'
 import '@storybook/addon-console'
 import README from './README.md'
 
+import StoryCentered from '../StoryCentered'
 import {{ properCase name }} from './'
 
+Vue.component('StoryCentered', StoryCentered)
 Vue.component('{{ properCase name }}', {{ properCase name }})
 
 storiesOf('{{ properCase name }}', module)
-  //.addDecorator(centered)
   .add('{{ properCase name }}', withReadme(README, () => ({
     methods: {
       log() {
@@ -21,8 +21,7 @@ storiesOf('{{ properCase name }}', module)
     },
     template: (
       pug
-      `v-app(dark)
-        v-container(fluid)
-          {{ properCase name }} `
+      `StoryCentered
+        {{ properCase name }} `
     )
   })))
