@@ -1,5 +1,5 @@
 <template lang="pug">
-  .the-text-field
+  div.the-text-field
     | the-text-field
 </template>
 
@@ -28,5 +28,6 @@ export default {
 
 <style lang="stylus" scoped>
   .the-text-field
+    width 100px
     // display: none
 </style>
