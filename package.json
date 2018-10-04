@@ -17,8 +17,11 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0",
     "express": "^4.16.3",
+    "markdown-it": "^8.4.2",
+    "markdown-it-attrs": "^2.3.2",
+    "markdown-it-playground": "0.0.5",
+    "nuxt": "^2.0.0",
     "vuetify": "^1.2.4"
   },
   "devDependencies": {
@@ -36,9 +39,6 @@
     "eslint": "^5.0.1",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.0.0",
-    "markdown-it": "^8.4.2",
-    "markdown-it-attrs": "^2.3.2",
-    "markdown-it-playground": "0.0.5",
     "nodemon": "^1.11.0",
     "plop": "^2.1.0",
     "pug": "^2.0.3",
