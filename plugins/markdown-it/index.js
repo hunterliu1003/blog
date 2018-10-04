@@ -4,6 +4,8 @@ import MarkdownIt from 'markdown-it'
 import markdownItAttrs from 'markdown-it-attrs'
 import markdownItPlayground from 'markdown-it-playground'
 
+import markdownItHighlightjs from './markdownItHighlightjs'
+
 const md = new MarkdownIt({
   html: true,
   linkify: true,
@@ -13,6 +15,7 @@ const md = new MarkdownIt({
 
 md.use(markdownItAttrs)
 md.use(markdownItPlayground)
+md.use(markdownItHighlightjs)
 
 Vue.use({
   install (Vue, options) {
