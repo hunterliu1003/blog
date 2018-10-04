@@ -10,7 +10,7 @@ const md = new MarkdownIt({
   html: true,
   linkify: true,
   typographer: true,
-  langPrefix: 'ht-'
+  langPrefix: 'blog-'
 })
 
 md.use(markdownItAttrs)
