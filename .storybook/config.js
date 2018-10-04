@@ -5,6 +5,8 @@ import Vuex from 'vuex'
 import Vuetify from 'vuetify'
 import theme from '@/vuetify.config.js'
 
+import '@/plugins/markdown-it'
+
 Vue.use(Vuex)
 
 Vue.use(Vuetify, {
@@ -35,6 +37,9 @@ Vue.component('no-ssr', {
 import '!!style-loader!css-loader!stylus-loader!../assets/style/reset.styl'
 
 import '!!style-loader!css-loader!stylus-loader!../assets/style/app.styl'
+
+import '!!style-loader!css-loader!highlight.js/styles/default.css'
+import '!!style-loader!css-loader!highlight.js/styles/monokai-sublime.css'
 
 import '!!style-loader!css-loader!stylus-loader!../assets/style/base.styl'
 /* end Css resources */

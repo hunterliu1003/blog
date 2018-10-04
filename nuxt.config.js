@@ -34,6 +34,11 @@ module.exports = {
     '@/assets/style/app.styl',
     /* vuetify end */
 
+    /* markdown-it start */
+      'highlight.js/styles/default.css',
+      'highlight.js/styles/monokai-sublime.css',
+    /* markdown-it end */
+
     '@/assets/style/base.styl',
   ],
   /*
