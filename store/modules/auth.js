@@ -1,12 +1,12 @@
 import { auth } from '@/services/fireinit.js'
 
-const state = {
+export const state = {
   user: null
 }
-const mutations = {
+export const mutations = {
   setUser (state, payload) { state.user = payload }
 }
-const actions = {
+export const actions = {
   signInWithEmail ({ commit }, payload) {
     return auth.signInWithEmailAndPassword(payload.email, payload.password)
       .then(user => user)
@@ -27,10 +27,4 @@ const actions = {
       })
     })
   }
-}
-
-export default {
-  state,
-  mutations,
-  actions
 }

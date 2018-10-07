@@ -9,6 +9,27 @@
       nuxt.admin-content
 </template>
 
+<script>
+export default {
+  beforeCreate () {
+    this.$store.dispatch('auth/signInAuto')
+      .then(user => {
+        user 
+          ? this.$router.push('/admin') 
+          : this.$router.push('/admin/signIn')
+      })
+  },
+  methods: {
+    signOut () {
+      this.$store.dispatch('auth/signOut')
+        .then(() => {
+          this.$router.push('/admin/signIn')
+        })
+    }
+  }
+}
+</script>
+
 <style lang="stylus" scoped>
   .admin-header
     z-index 999
