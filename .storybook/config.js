@@ -43,6 +43,9 @@ import '!!style-loader!css-loader!stylus-loader!../assets/style/app.styl'
 import '!!style-loader!css-loader!highlight.js/styles/default.css'
 import '!!style-loader!css-loader!highlight.js/styles/monokai-sublime.css'
 
+import '!!style-loader!css-loader!codemirror/lib/codemirror.css'
+import '!!style-loader!css-loader!codemirror/theme/monokai.css'
+
 import '!!style-loader!css-loader!stylus-loader!../assets/style/base.styl'
 /* end Css resources */
 

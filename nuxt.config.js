@@ -15,7 +15,8 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.2.0/css/all.css' },
     ]
   },
 
@@ -38,6 +39,11 @@ module.exports = {
       'highlight.js/styles/default.css',
       'highlight.js/styles/monokai-sublime.css',
     /* markdown-it end */
+
+    /* codemirror start */
+      'codemirror/lib/codemirror.css',
+      'codemirror/theme/monokai.css',
+    /* codemirror end */
 
     '@/assets/style/base.styl',
   ],

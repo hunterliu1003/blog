@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 9002 -c .storybook",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js",
     "plop": "plop --plopfile ./plop/index.js",
@@ -25,6 +25,7 @@
     "markdown-it-attrs": "^2.3.2",
     "markdown-it-playground": "0.0.5",
     "nuxt": "^2.0.0",
+    "simple-vue-validator": "^0.15.1",
     "vue-codemirror": "^4.0.5",
     "vuetify": "^1.2.4"
   },
