@@ -5,6 +5,7 @@ import Vuex from 'vuex'
 import Vuetify from 'vuetify'
 import theme from '@/vuetify.config.js'
 
+import '@/plugins/filters/date'
 import '@/plugins/markdown-it'
 
 Vue.use(Vuex)

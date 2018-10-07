@@ -46,7 +46,8 @@ module.exports = {
   */
   plugins: [
     '@/plugins/vuetify',
-    '@/plugins/markdown-it'
+    '@/plugins/filters/date.js',
+    '@/plugins/markdown-it',
   ],
 
   /*
