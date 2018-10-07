@@ -7,6 +7,7 @@ import theme from '@/vuetify.config.js'
 
 import '@/plugins/filters/date'
 import '@/plugins/markdown-it'
+import '@/plugins/codemirror'
 
 Vue.use(Vuex)
 

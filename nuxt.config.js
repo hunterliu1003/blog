@@ -48,6 +48,7 @@ module.exports = {
     '@/plugins/vuetify',
     '@/plugins/filters/date.js',
     '@/plugins/markdown-it',
+    { src: '@/plugins/codemirror', ssr: false },
   ],
 
   /*
