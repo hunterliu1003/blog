@@ -6,19 +6,11 @@
         p.pl-1.pt-2.title.grey--text.text--lighten-2.mt-2 {{ post.postTime | date }}
         TheTags.pt-2(:tags="post.tags")
         TheMarkdown.pl-1.mt-3(:markdownText="post.articleContent")
-        //- VueDisqus.pt-2.mt-5(
-        //-   shortname="hunterliu"
-        //-   :identifier="$route.params.postId"
-        //- )
 </template>
 
 <script>
-// import Vue from 'vue'
 import TheMarkdown from '@/components/TheMarkdown'
 import TheTags from '@/components/TheTags'
-// import VueDisqus from 'vue-disqus'
-
-// Vue.use(VueDisqus)
 
 export default {
   components: {
