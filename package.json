@@ -28,6 +28,7 @@
     "nuxt": "^2.1.0",
     "simple-vue-validator": "^0.15.1",
     "vue-codemirror": "^4.0.5",
+    "vue-disqus": "^3.0.5",
     "vuetify": "^1.2.4"
   },
   "devDependencies": {
