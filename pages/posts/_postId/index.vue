@@ -21,7 +21,7 @@ export default {
     return store.dispatch('post/getPostByPostId', params.postId)
       .then(post => {
         if (!post) redirect('/error')
-        return post
+        return { post }
       })
   }
 }
