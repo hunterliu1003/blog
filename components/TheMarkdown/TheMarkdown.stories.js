@@ -5,10 +5,8 @@ import { withReadme }  from 'storybook-readme'
 import '@storybook/addon-console'
 import README from './README.md'
 
-import StoryCentered from '../StoryCentered'
 import TheMarkdown from './'
 
-Vue.component('StoryCentered', StoryCentered)
 Vue.component('TheMarkdown', TheMarkdown)
 
 storiesOf('TheMarkdown', module)
@@ -43,7 +41,6 @@ storiesOf('TheMarkdown', module)
   }),
   template: (
     pug
-    `StoryCentered
-      TheMarkdown(:markdown-text='md') `
+    `TheMarkdown(:markdown-text='md') `
   )
 })))

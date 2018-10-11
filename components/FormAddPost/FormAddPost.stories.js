@@ -6,10 +6,8 @@ import { withReadme }  from 'storybook-readme'
 import '@storybook/addon-console'
 import README from './README.md'
 
-import StoryCentered from '../StoryCentered'
 import FormAddPost from './'
 
-Vue.component('StoryCentered', StoryCentered)
 Vue.component('FormAddPost', FormAddPost)
 
 storiesOf('FormAddPost', module)
@@ -21,7 +19,6 @@ storiesOf('FormAddPost', module)
     },
     template: (
       pug
-      `StoryCentered
-        FormAddPost `
+      `FormAddPost `
     )
   })))

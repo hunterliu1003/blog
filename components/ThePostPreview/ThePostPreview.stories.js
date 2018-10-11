@@ -6,19 +6,18 @@ import { withReadme }  from 'storybook-readme'
 import '@storybook/addon-console'
 import README from './README.md'
 
-import StoryCentered from '../StoryCentered'
 import ThePostPreview from './'
 
-Vue.component('StoryCentered', StoryCentered)
 Vue.component('ThePostPreview', ThePostPreview)
 
 storiesOf('ThePostPreview', module)
+  // .addDecorator(CenterDecorator)
   .add('ThePostPreview default', withReadme(README, () => ({
     data: vm => ({
       thePost: {
         id: '1',
         title: 'Article111',
-        lastUpdateTime: '25. Oct 2018',
+        lastUpdateTime: Date.now(),
         previewContent: 'Preview Content',
         tags: ['vue', 'nuxt 2', 'vuetify'],
         isShow: true
@@ -31,16 +30,15 @@ storiesOf('ThePostPreview', module)
     },
     template: (
       pug
-      `StoryCentered
-        ThePostPreview(
-          style="width: 500px;"
-          :id="thePost.id"
-          :title="thePost.title"
-          :lastUpdateTime="thePost.lastUpdateTime"
-          :previewContent="thePost.previewContent"
-          :tags="thePost.tags"
-          :isShow="thePost.isShow"
-        ) `
+      `ThePostPreview(
+        style="width: 500px;"
+        :id="thePost.id"
+        :title="thePost.title"
+        :lastUpdateTime="thePost.lastUpdateTime"
+        :previewContent="thePost.previewContent"
+        :tags="thePost.tags"
+        :isShow="thePost.isShow"
+      ) `
     )
   })))
   .add('ThePostPreview admin', withReadme(README, () => ({
@@ -48,7 +46,7 @@ storiesOf('ThePostPreview', module)
       thePost: {
         id: '1',
         title: 'Article111',
-        lastUpdateTime: '25. Oct 2018',
+        lastUpdateTime: Date.now(),
         previewContent: 'Preview Content',
         tags: ['vue', 'nuxt 2', 'vuetify'],
         isShow: true
@@ -61,16 +59,15 @@ storiesOf('ThePostPreview', module)
     },
     template: (
       pug
-      `StoryCentered
-        ThePostPreview(
-          style="width: 500px;"
-          :id="thePost.id"
-          :title="thePost.title"
-          :lastUpdateTime="thePost.lastUpdateTime"
-          :previewContent="thePost.previewContent"
-          :tags="thePost.tags"
-          :isShow="thePost.isShow"
-          isAdmin
-        ) `
+      `ThePostPreview(
+        style="width: 500px;"
+        :id="thePost.id"
+        :title="thePost.title"
+        :lastUpdateTime="thePost.lastUpdateTime"
+        :previewContent="thePost.previewContent"
+        :tags="thePost.tags"
+        :isShow="thePost.isShow"
+        :isAdmin="true"
+      ) `
     )
   })))
