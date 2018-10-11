@@ -49,12 +49,12 @@ export default {
   },
   watch: {
     isShowArticle (value) {
-      // this.$store.dispatch('post/setPost', {
-      //   postId: this.id,
-      //   thePost: {
-      //     isShow: value,
-      //   },
-      // })
+      this.$store.dispatch('post/setPost', {
+        postId: this.id,
+        thePost: {
+          isShow: value,
+        },
+      })
     }
   }
 }
