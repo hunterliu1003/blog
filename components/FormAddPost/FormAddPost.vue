@@ -25,7 +25,7 @@
       small-chips
       dense
       color="primary"
-      max-height="200"
+      :menu-props="{ maxHeight: '200' }"
     )
       template(slot="selection", slot-scope="{ item, parent, selected }")
         v-chip(color="grey darken-4", :selected="selected" label small)

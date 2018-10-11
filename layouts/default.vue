@@ -4,7 +4,7 @@
       v-layout.default-nav.main(row wrap align-content-center)
         v-container.text-xs-center.pa-3
           nuxt-link.link.white--text(to="/")
-            v-avatar(size="175px")
+            v-avatar(size="175px" tile)
               img.img-circle.elevation-7.mb-1(src="~/static/v.png")
             h1.display-1.mt-2 Hunterliu
         v-container.pa-0
