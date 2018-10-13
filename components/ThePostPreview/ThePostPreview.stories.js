@@ -31,7 +31,6 @@ storiesOf('ThePostPreview', module)
     template: (
       pug
       `ThePostPreview(
-        style="width: 500px;"
         :id="thePost.id"
         :title="thePost.title"
         :lastUpdateTime="thePost.lastUpdateTime"
@@ -60,7 +59,6 @@ storiesOf('ThePostPreview', module)
     template: (
       pug
       `ThePostPreview(
-        style="width: 500px;"
         :id="thePost.id"
         :title="thePost.title"
         :lastUpdateTime="thePost.lastUpdateTime"
