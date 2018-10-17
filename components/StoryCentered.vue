@@ -2,6 +2,5 @@
   v-app(dark)
     v-container
       v-layout(justify-center align-center fill-height)
-        v-flex
-          slot
+        slot
 </template>
