@@ -6,10 +6,8 @@ import { withReadme }  from 'storybook-readme'
 import '@storybook/addon-console'
 import README from './README.md'
 
-import StoryCentered from '../StoryCentered'
-import TheTextField from './'
+import TheTextField from '.'
 
-Vue.component('StoryCentered', StoryCentered)
 Vue.component('TheTextField', TheTextField)
 
 storiesOf('TheTextField', module)
@@ -21,7 +19,6 @@ storiesOf('TheTextField', module)
     },
     template: (
       pug
-      `StoryCentered
-        TheTextField `
+      `TheTextField `
     )
   })))

@@ -6,10 +6,8 @@ import { withReadme }  from 'storybook-readme'
 import '@storybook/addon-console'
 import README from './README.md'
 
-import StoryCentered from '../StoryCentered'
-import {{ properCase name }} from './'
+import {{ properCase name }} from '.'
 
-Vue.component('StoryCentered', StoryCentered)
 Vue.component('{{ properCase name }}', {{ properCase name }})
 
 storiesOf('{{ properCase name }}', module)
@@ -21,7 +19,6 @@ storiesOf('{{ properCase name }}', module)
     },
     template: (
       pug
-      `StoryCentered
-        {{ properCase name }} `
+      `{{ properCase name }} `
     )
   })))

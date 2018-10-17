@@ -1,9 +1,10 @@
-import { configure } from '@storybook/vue'
-import { setOptions } from '@storybook/addon-options'
+import { configure, addDecorator } from '@storybook/vue'
+import { withOptions } from '@storybook/addon-options'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Vuetify from 'vuetify'
 import theme from '@/vuetify.config.js'
+import StoryCentered from '@/components/StoryCentered'
 
 Vue.use(Vuex)
 
@@ -11,8 +12,10 @@ Vue.use(Vuetify, {
   theme
 })
 
+Vue.component('StoryCentered', StoryCentered)
+
 Vue.component('nuxt-link', {
-  // functional: true,
+  functional: true,
   render (createElement, context) {
     let allClass = {}
     let arrClass = context.data.staticClass
@@ -25,7 +28,7 @@ Vue.component('nuxt-link', {
   }
 })
 Vue.component('no-ssr', {
-  // functional: true,
+  functional: true,
   render (createElement, context) {
     return context.children
   }
@@ -39,11 +42,22 @@ import '!!style-loader!css-loader!stylus-loader!../assets/style/app.styl'
 import '!!style-loader!css-loader!stylus-loader!../assets/style/base.styl'
 /* end Css resources */
 
-setOptions({
-  name: 'nuxt blog',
-  url: 'https://github.com/hunterliu1003/blog',
-  addonPanelInRight: true
-})
+addDecorator(
+  withOptions({
+    name: 'nuxt blog',
+    url: 'https://github.com/hunterliu1003/blog',
+    addonPanelInRight: true
+  })
+)
+
+const CenterDecorator = storyFn => {
+  const story = storyFn()
+  return {
+    component: { story },
+    template: `<StoryCentered><story></story></StoryCentered>`
+  }
+}
+addDecorator(CenterDecorator)
 
 const req = require.context('../components', true, /stories\.js$/)
 
