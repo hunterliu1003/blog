@@ -54,8 +54,8 @@ export default {
               email: this.email,
               password: this.password
             })
-              .then(user => {
-                if (user) {
+              .then(data => {
+                if (data.status === 'success') {
                   this.error = false
                   this.$router.push('/admin')
                 } else {
