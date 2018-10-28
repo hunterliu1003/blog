@@ -9,7 +9,8 @@ export const mutations = {
 export const actions = {
   signInWithEmail ({ commit }, payload) {
     return auth.signInWithEmailAndPassword(payload.email, payload.password)
-      .then(user => user)
+      .then(user => ({ ...user, status: 'success' }))
+      .catch(e => ({ ...e, status: 'error' }))
   },
   signOut ({ commit }) {
     return auth.signOut()
@@ -18,7 +19,7 @@ export const actions = {
       })
   },
   signInAuto ({ commit }) {
-    return new Promise((resolve, reject) => {
+    return new Promise(resolve => {
       auth.onAuthStateChanged(user => {
         if (user) {
           commit('setUser', user)
