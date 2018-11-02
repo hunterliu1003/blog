@@ -1,4 +1,5 @@
 const pkg = require('./package')
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 
 module.exports = {
   mode: 'universal',
@@ -69,6 +70,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    analyze: {
+      analyzerMode: 'static'
+    },
     /*
     ** You can extend webpack config here
     */
@@ -82,6 +86,22 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      if (ctx.isClient) {
+        config.plugins.unshift(new LodashModuleReplacementPlugin)
+        // rules[2].use[0] is babel-loader
+        config.module.rules[2].use[0].options.plugins = ['lodash']
+      }
+    },
+    optimization: {
+      splitChunks: {
+        minSize: 10000,
+        maxSize: 250000
+      }
+    }
+  },
+  render: {
+    http2: {
+      push: true
     }
   }
 }

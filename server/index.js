@@ -4,7 +4,7 @@ const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const app = express()
 const host = process.env.HOST || '127.0.0.1'
-const port = process.env.PORT || 8787
+const port = process.env.PORT || process.env.NODE_ENV === 'production' ? 8787 : 8700
 
 app.set('port', port)
 
