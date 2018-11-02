@@ -14,6 +14,7 @@
         v-pagination(
           v-model='page'
           :length='pageLength'
+          :total-visible="7"
           circle
           @input="toPage"
         )

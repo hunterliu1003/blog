@@ -76,7 +76,7 @@ module.exports = {
     analyze: {
       analyzerMode: 'static'
     },
-    // transpile: [/^vuetify/],
+    transpile: [/^vuetify/],
     /*
     ** You can extend webpack config here
     */

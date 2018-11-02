@@ -15,6 +15,7 @@
           v-model='page'
           :length='pageLength'
           circle
+          :total-visible="7"
           @input="toPage"
         )
 </template>
