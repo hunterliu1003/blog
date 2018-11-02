@@ -1,5 +1,7 @@
 const pkg = require('./package')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+
 
 module.exports = {
   mode: 'universal',
@@ -70,9 +72,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    extractCSS: true,
     analyze: {
       analyzerMode: 'static'
     },
+    // transpile: [/^vuetify/],
     /*
     ** You can extend webpack config here
     */
@@ -86,6 +90,9 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      config.plugins.push(
+        new VuetifyLoaderPlugin()
+      )
       if (ctx.isClient) {
         config.plugins.unshift(new LodashModuleReplacementPlugin)
         // rules[2].use[0] is babel-loader
