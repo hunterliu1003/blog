@@ -73,9 +73,6 @@ module.exports = {
   */
   build: {
     extractCSS: true,
-    analyze: {
-      analyzerMode: 'static'
-    },
     transpile: [/^vuetify/],
     /*
     ** You can extend webpack config here
@@ -93,11 +90,11 @@ module.exports = {
       config.plugins.push(
         new VuetifyLoaderPlugin()
       )
-      if (ctx.isClient) {
+      // if (ctx.isClient) {
         config.plugins.unshift(new LodashModuleReplacementPlugin)
         // rules[2].use[0] is babel-loader
         config.module.rules[2].use[0].options.plugins = ['lodash']
-      }
+      // }
     },
     optimization: {
       splitChunks: {
