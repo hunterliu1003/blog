@@ -7,5 +7,5 @@ Vue.use(Vuetify, {
   theme,
   components: {
     VLayout
-  }
+  },
 })
