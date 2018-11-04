@@ -9,7 +9,7 @@
     "storybook": "start-storybook -p 9002 -c .storybook",
     "build": "nuxt build",
     "analyze": "nuxt build -a",
-    "start": "cross-env NODE_ENV=production node server/index.js",
+    "start": "nuxt start",
     "plop": "plop --plopfile ./plop/index.js",
     "generate": "nuxt generate",
     "generate:storybook": "build-storybook -c .storybook -o blog-storybook",
