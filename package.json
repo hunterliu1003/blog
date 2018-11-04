@@ -15,7 +15,7 @@
     "generate:storybook": "build-storybook -c .storybook -o blog-storybook",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build && npm start"
   },
   "dependencies": {
     "codemirror": "^5.40.2",
