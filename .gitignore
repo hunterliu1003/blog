@@ -70,6 +70,8 @@ typings/
 
 # Nuxt generate
 dist
+blog
+ironman-blog
 
 # vuepress build output
 .vuepress/dist
