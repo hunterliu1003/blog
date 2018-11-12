@@ -42,7 +42,7 @@ Vue.component('no-ssr', {
 /* start Css resources */
 import '!!style-loader!css-loader!stylus-loader!../assets/style/reset.styl'
 
-import '!!style-loader!css-loader!stylus-loader!../assets/style/app.styl'
+import '!!style-loader!css-loader!stylus-loader!../assets/style/app.storybook.styl'
 
 import '!!style-loader!css-loader!highlight.js/styles/default.css'
 import '!!style-loader!css-loader!highlight.js/styles/monokai-sublime.css'
