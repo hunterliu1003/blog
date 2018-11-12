@@ -24,6 +24,7 @@ import ThePostPreview from '@/components/ThePostPreview'
 
 export default {
   layout: 'admin',
+  middleware: 'authenticated',
   components: {
     ThePostPreview,
   },

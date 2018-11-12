@@ -12,6 +12,7 @@ import FormAddPost from '@/components/FormAddPost'
 
 export default {
   layout: 'admin',
+  middleware: 'authenticated',
   components: {
     FormAddPost
   },
