@@ -29,3 +29,8 @@ export const actions = {
     })
   }
 }
+export const getters = {
+  authenticated (state) {
+    return !!state.user
+  }
+}
