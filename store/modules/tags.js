@@ -1,4 +1,4 @@
-import { db } from '@/services/fireinit'
+import { db } from '@/plugins/firebase'
 import { uniq, flatten } from 'lodash'
 
 export const actions = {

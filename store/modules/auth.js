@@ -1,4 +1,4 @@
-import { auth } from '@/services/fireinit.js'
+import { auth } from '@/plugins/firebase'
 
 export const state = {
   user: null

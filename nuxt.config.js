@@ -3,16 +3,7 @@ const { uniq, flatten } = require('lodash')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
-const config = require('./firebase.config.js')
-
-import firebase from 'firebase/app'
-import 'firebase/firestore'
-
-if (!firebase.apps.length) {
-  firebase.initializeApp(config)
-  firebase.firestore().settings({timestampsInSnapshots: true})
-}
-const db = firebase.firestore()
+// import { db } from './plugins/firebase'
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES'
   ? {
@@ -78,7 +69,7 @@ module.exports = {
   */
   plugins: [
     '@/plugins/vuetify',
-    '@/plugins/filters/date.js',
+    '@/plugins/filters/date',
     '@/plugins/markdown-it',
     { src: '@/plugins/codemirror', ssr: false },
   ],

@@ -1,4 +1,4 @@
-import { db } from '@/services/fireinit'
+import { db } from '@/plugins/firebase'
 
 export const actions = {
   addPost ({}, payload) {
