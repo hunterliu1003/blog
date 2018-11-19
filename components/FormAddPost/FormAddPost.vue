@@ -39,6 +39,7 @@
       span.ml-2.caption.error--text(v-if="validation.hasError('thePost.previewContent')") {{ validation.firstError('thePost.previewContent') }}
     no-ssr
       codemirror(
+        id="PreviewContent"
         v-model="thePost.previewContent"
         :options="codemirrorOptions"
       )
@@ -55,6 +56,7 @@
       span.ml-2.caption.error--text(v-if="validation.hasError('thePost.articleContent')") {{ validation.firstError('thePost.articleContent') }}
     no-ssr
       codemirror(
+        id="ArticleContent"
         v-model="thePost.articleContent"
         :options="codemirrorOptions"
       )
@@ -98,7 +100,7 @@ export default {
       },
     items: ['Vue', 'Vuex', 'Vue Router', 'Vuetify'],
     codemirrorOptions: {
-      tabSize: 4,
+      tabSize: 2,
       mode: 'markdown',
       theme: 'monokai',
       lineNumbers: true,
@@ -137,4 +139,10 @@ export default {
 <style lang="stylus" scoped>
 >>> .v-chip__content
   cursor pointer
+>>> #PreviewContent .CodeMirror {
+  height 125px;
+}
+>>> #ArticleContent .CodeMirror {
+  height 250px;
+}
 </style>
