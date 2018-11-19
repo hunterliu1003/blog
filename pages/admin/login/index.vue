@@ -19,12 +19,12 @@
             :error="validation.hasError('password')"
             color="white"
             type="password"
-            @keydown.enter="signIn"
+            @keydown.enter="login"
           )
           p.red--text(v-if="error") Email 或 密碼錯誤！
           v-layout
             v-spacer
-            v-btn(@click="signIn") 登入
+            v-btn(@click="login") 登入
 </template>
 
 <script>
@@ -46,7 +46,7 @@ export default {
     password: value => Validator.value(value).required()
   },
   methods: {
-    signIn () {
+    login () {
       this.$validate()
         .then(success => {
           if (success) {
