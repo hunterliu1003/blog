@@ -3,7 +3,7 @@
     v-container
       v-layout
         v-flex(xs12 sm10 offset-sm1 lg8 offset-lg2)
-          h1.text-xs-center.display-1 New Post
+          h1.text-xs-center.display-1 發佈文章
           FormAddPost(@submit="addPost")
 </template>
 

@@ -3,7 +3,7 @@
     v-container
       v-layout
         v-flex(xs12 sm10 offset-sm1 lg8 offset-lg2)
-          h1.text-xs-center.display-1 Edit Post
+          h1.text-xs-center.display-1 編輯文章
           FormAddPost(:post="post" @submit="setPost")
 </template>
 

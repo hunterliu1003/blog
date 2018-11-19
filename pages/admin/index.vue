@@ -3,7 +3,7 @@
     v-container
       v-layout
         v-flex(xs12 sm10 offset-sm1 lg8 offset-lg2)
-          h1.text-xs-center.display-1 Admin Page
+          h1.text-xs-center.display-1 文章列表
       v-layout(wrap)
         v-flex(xs12 sm10 offset-sm1 lg8 offset-lg2 v-for="post in posts" :key="post.id")
           ThePostPreview(
