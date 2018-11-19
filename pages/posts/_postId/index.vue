@@ -22,6 +22,11 @@ import VueDisqus from 'vue-disqus'
 Vue.use(VueDisqus)
 
 export default {
+  head () {
+    return {
+      title: this.post.title
+    }
+  },
   components: {
     TheMarkdown,
     TheTags,
