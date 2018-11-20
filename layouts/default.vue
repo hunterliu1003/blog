@@ -6,7 +6,7 @@
           nuxt-link.link.white--text(to="/")
             v-avatar(size="175px" tile)
               img.img-circle.elevation-7.mb-1(src="~/static/v.png")
-            h1.display-1.mt-2 Hunterliu
+            h1.display-1.mt-2 HunterLiu
         v-container.pa-0
           v-layout(column align-center)
             nuxt-link.link.default-link.white--text.font-ch.pa-1(to="/about") 關於我
