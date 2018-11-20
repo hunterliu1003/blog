@@ -22,6 +22,9 @@ export default {
 <style lang="stylus" scoped>
   .the-tag
     text-decoration none
+</style>
+
+<style lang="stylus" scoped>
   .v-chip:after
     border-color #212121
   .v-chip:hover:after
