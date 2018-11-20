@@ -24,14 +24,14 @@ export default {
       .then(user => {
         user 
           ? this.$router.push('/admin') 
-          : this.$router.push('/admin/signIn')
+          : this.$router.push('/admin/login')
       })
   },
   methods: {
     signOut () {
       this.$store.dispatch('auth/signOut')
         .then(() => {
-          this.$router.push('/admin/signIn')
+          this.$router.push('/admin/login')
         })
     }
   }
