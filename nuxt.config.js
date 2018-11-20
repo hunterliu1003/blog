@@ -113,12 +113,6 @@ module.exports = {
       }
     }
   },
-  
-  render: {
-    http2: {
-      push: true
-    }
-  },
 
   ...routerBase,
 
