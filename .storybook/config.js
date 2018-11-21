@@ -3,7 +3,7 @@ import { withOptions } from '@storybook/addon-options'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Vuetify from 'vuetify'
-import theme from '@/vuetify.config.js'
+import theme from '@/plugins/vuetify/vuetify.config.js'
 import StoryCentered from '@/components/StoryCentered'
 
 import '@/plugins/filters/date'
