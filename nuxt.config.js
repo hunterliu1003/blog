@@ -3,6 +3,7 @@ const { uniq, flatten } = require('lodash')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
+/* only for scripts generate */
 // import { db } from './plugins/firebase'
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES'
