@@ -10,6 +10,20 @@ import '@/plugins/filters/date'
 import '@/plugins/markdown-it'
 import '@/plugins/codemirror'
 
+/* start Css resources */
+import '!!style-loader!css-loader!stylus-loader!../assets/style/reset.styl'
+
+import '!!style-loader!css-loader!stylus-loader!../assets/style/app.storybook.styl'
+
+import '!!style-loader!css-loader!highlight.js/styles/default.css'
+import '!!style-loader!css-loader!highlight.js/styles/monokai-sublime.css'
+
+import '!!style-loader!css-loader!codemirror/lib/codemirror.css'
+import '!!style-loader!css-loader!codemirror/theme/monokai.css'
+
+import '!!style-loader!css-loader!stylus-loader!../assets/style/base.styl'
+/* end Css resources */
+
 Vue.use(Vuex)
 
 Vue.use(Vuetify, {
@@ -39,20 +53,6 @@ Vue.component('no-ssr', {
   }
 })
 
-/* start Css resources */
-import '!!style-loader!css-loader!stylus-loader!../assets/style/reset.styl'
-
-import '!!style-loader!css-loader!stylus-loader!../assets/style/app.storybook.styl'
-
-import '!!style-loader!css-loader!highlight.js/styles/default.css'
-import '!!style-loader!css-loader!highlight.js/styles/monokai-sublime.css'
-
-import '!!style-loader!css-loader!codemirror/lib/codemirror.css'
-import '!!style-loader!css-loader!codemirror/theme/monokai.css'
-
-import '!!style-loader!css-loader!stylus-loader!../assets/style/base.styl'
-/* end Css resources */
-
 addDecorator(
   withOptions({
     name: 'nuxt blog',
@@ -60,16 +60,6 @@ addDecorator(
     addonPanelInRight: true
   })
 )
-
-const CenterDecorator = storyFn => {
-  const story = storyFn()
-  return {
-    component: { story },
-    template: `<StoryCentered><story></story></StoryCentered>`
-  }
-}
-addDecorator(CenterDecorator)
-
 
 const req = require.context('../components', true, /stories\.js$/)
 

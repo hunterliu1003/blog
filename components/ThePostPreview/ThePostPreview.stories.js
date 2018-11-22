@@ -1,5 +1,6 @@
 import Vue from 'vue'
 
+import centerDecorator from '@/plugins/storybook/centerDecorator'
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import { withReadme }  from 'storybook-readme'
@@ -11,7 +12,7 @@ import ThePostPreview from './'
 Vue.component('ThePostPreview', ThePostPreview)
 
 storiesOf('ThePostPreview', module)
-  // .addDecorator(CenterDecorator)
+  .addDecorator(centerDecorator)
   .add('ThePostPreview default', withReadme(README, () => ({
     data: vm => ({
       thePost: {

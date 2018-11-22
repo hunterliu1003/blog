@@ -1,5 +1,6 @@
 import Vue from 'vue'
 
+import centerDecorator from '@/plugins/storybook/centerDecorator'
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import { withReadme }  from 'storybook-readme'
@@ -11,6 +12,7 @@ import {{ properCase name }} from './'
 Vue.component('{{ properCase name }}', {{ properCase name }})
 
 storiesOf('{{ properCase name }}', module)
+  .addDecorator(centerDecorator)
   .add('{{ properCase name }}', withReadme(README, () => ({
     methods: {
       log() {
