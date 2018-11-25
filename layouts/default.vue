@@ -4,14 +4,14 @@
       v-layout.default-nav.main(row wrap align-content-center)
         v-container.text-xs-center.pa-3
           nuxt-link.link.white--text(to="/")
-            v-avatar(size="175px" tile)
-              img.img-circle.elevation-7.mb-1(src="~/static/v.png")
+            v-avatar(size="175px")
+              img.img-circle.elevation-7.mb-1(src="~/static/head.jpg" alt="hunterliu")
             h1.display-1.mt-2 HunterLiu
         v-container.pa-0
           v-layout(column align-center)
-            nuxt-link.link.default-link.white--text.font-ch.pa-1(to="/about") 關於我
-            nuxt-link.link.default-link.white--text.font-ch.pa-1(to="/posts") 文章列表
-            nuxt-link.link.default-link.white--text.font-ch.pa-1(to="/tags") 標籤列表
+            nuxt-link.default-link.link.white--text.font-ch.pa-1(to="/about") 關於我
+            nuxt-link.default-link.link.white--text.font-ch.pa-1(to="/posts") 文章列表
+            nuxt-link.default-link.link.white--text.font-ch.pa-1(to="/tags") 標籤列表
           v-layout.mt-4(justify-center)
             p.subheading.grey--text © 2018. All rights reserved.
       v-layout.default-content
