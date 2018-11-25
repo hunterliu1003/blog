@@ -23,6 +23,9 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'zh-Hant'
+    },
     titleTemplate: titleChunk => {
       return titleChunk ? `${ titleChunk } | Hunterliu's Blog` : `Hunterliu's Blog`
     },
