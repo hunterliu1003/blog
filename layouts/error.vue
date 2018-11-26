@@ -3,7 +3,6 @@
     h1.headline Oop, something went wrong!
     p Back to&nbsp;
       nuxt-link.link.headline(to="/") home page
-      | &nbsp;!
 </template>
 
 <script>
