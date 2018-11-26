@@ -13,7 +13,7 @@
     v-layout
       v-flex(xs12 sm10 offset-sm1 md12 offset-md0 lg9)
         v-timeline(:dense="$vuetify.breakpoint.smAndDown")
-          v-timeline-item(v-for="(event, i) in events" :color="colors[i % colors.length]" :key="i" small)
+          v-timeline-item(v-for="(event, i) in events" :key="i" :color="colors[i % colors.length]" small)
             .py-2
               h2(:class="`headline font-weight-bold mb-1 ${colors[i % colors.length]}--text`")
                 | {{ event.title }}
