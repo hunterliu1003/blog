@@ -2,10 +2,11 @@ import Vue from 'vue'
 
 import centerDecorator from '@/plugins/storybook/centerDecorator'
 import { storiesOf } from '@storybook/vue'
-import { action } from '@storybook/addon-actions'
 import { withReadme }  from 'storybook-readme'
 import '@storybook/addon-console'
 import README from './README.md'
+
+import { db } from '@/plugins/firebase'
 
 import ThePostPreview from './'
 
@@ -14,20 +15,17 @@ Vue.component('ThePostPreview', ThePostPreview)
 storiesOf('ThePostPreview', module)
   .addDecorator(centerDecorator)
   .add('ThePostPreview default', withReadme(README, () => ({
-    data: vm => ({
-      thePost: {
-        id: '1',
-        title: 'Article111',
-        lastUpdateTime: Date.now(),
-        previewContent: 'Preview Content',
-        tags: ['vue', 'nuxt 2', 'vuetify'],
-        isShow: true
-      }
+    data: () => ({
+      thePost: {}
     }),
-    methods: {
-      log() {
-        action('ThePostPreview')()
-      },
+    mounted () {
+      db.collection('posts').doc('V7Wzgn3vWIHLxJbrkF97').get()
+        .then(doc => {
+          this.thePost = {
+            id: doc.id,
+            ...doc.data()
+          }
+        })
     },
     template: (
       pug
@@ -42,20 +40,17 @@ storiesOf('ThePostPreview', module)
     )
   })))
   .add('ThePostPreview admin', withReadme(README, () => ({
-    data: vm => ({
-      thePost: {
-        id: '1',
-        title: 'Article111',
-        lastUpdateTime: Date.now(),
-        previewContent: 'Preview Content',
-        tags: ['vue', 'nuxt 2', 'vuetify'],
-        isShow: true
-      }
+    data: () => ({
+      thePost: {}
     }),
-    methods: {
-      log() {
-        action('ThePostPreview')()
-      },
+    mounted () {
+      db.collection('posts').doc('V7Wzgn3vWIHLxJbrkF97').get()
+        .then(doc => {
+          this.thePost = {
+            id: doc.id,
+            ...doc.data()
+          }
+        })
     },
     template: (
       pug
