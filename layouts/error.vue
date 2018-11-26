@@ -1,8 +1,8 @@
 <template lang="pug">
-  v-container.error-page
-    h1 Oop, something went wrong!
+  v-layout(column justify-center align-center fill-height)
+    h1.headline Oop, something went wrong!
     p Back to&nbsp;
-      nuxt-link.link(to="/") safety
+      nuxt-link.link.headline(to="/") home page
       | &nbsp;!
 </template>
 
