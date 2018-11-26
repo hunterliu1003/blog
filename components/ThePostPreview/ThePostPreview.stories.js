@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Vuex from 'vuex'
 
 import centerDecorator from '@/plugins/storybook/centerDecorator'
 import { storiesOf } from '@storybook/vue'
@@ -9,6 +10,8 @@ import README from './README.md'
 import { db } from '@/plugins/firebase'
 
 import ThePostPreview from './'
+
+Vue.use(Vuex)
 
 Vue.component('ThePostPreview', ThePostPreview)
 
@@ -40,6 +43,13 @@ storiesOf('ThePostPreview', module)
     )
   })))
   .add('ThePostPreview admin', withReadme(README, () => ({
+    store: new Vuex.Store({
+      actions: {
+        'post/setPost'() {
+          console.log('dispatch: post/setPost')
+        }
+      }
+    }),
     data: () => ({
       thePost: {}
     }),
