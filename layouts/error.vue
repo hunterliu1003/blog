@@ -2,7 +2,7 @@
   v-container.error-page
     h1 Oop, something went wrong!
     p Back to&nbsp;
-      a(href="/") safety
+      nuxt-link.link(to="/") safety
       | &nbsp;!
 </template>
 
@@ -19,10 +19,4 @@ export default {
   display flex
   flex-direction column
   justify-content center
-a
-  text-decoration none
-  color red
-
 </style>
-
-
