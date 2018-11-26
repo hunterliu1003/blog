@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-layout(column justify-center align-center fill-height)
+  v-layout(column justify-center align-center)
     h1.headline Oop, something went wrong!
     p Back to&nbsp;
       nuxt-link.link.headline(to="/") home page
