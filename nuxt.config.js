@@ -110,6 +110,13 @@ module.exports = {
       // rules[2].use[0] is babel-loader
       config.module.rules[2].use[0].options.plugins = ['lodash']
     },
+    // babel: {
+    //   plugins: ['lodash']
+    // },
+    // plugins: [
+    //   new LodashModuleReplacementPlugin,
+    //   new VuetifyLoaderPlugin()
+    // ],
     optimization: {
       splitChunks: {
         minSize: 10000,
