@@ -19,6 +19,7 @@ module.exports = (storybookBaseConfig, configType) => {
     ]
   })
   storybookBaseConfig.resolve.alias['@'] = path.dirname(path.resolve(__dirname))
+  storybookBaseConfig.resolve.alias['~'] = path.dirname(path.resolve(__dirname))
 
   return storybookBaseConfig
 }
