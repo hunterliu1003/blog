@@ -82,6 +82,4 @@ ironman-blog
 # IDE
 .idea
 
-package-lock.json
-
 blog-storybook
