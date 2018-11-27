@@ -1,7 +1,12 @@
+import StoryCentered from '@/components/StoryCentered'
+
 export default function (storyFn) {
-	const story = storyFn()
+	const TheStory = storyFn()
 	return {
-		component: { story },
-		template: `<StoryCentered><story></story></StoryCentered>`
+		components: { 
+			StoryCentered,
+			TheStory
+		},
+		template: `<StoryCentered><TheStory></TheStory></StoryCentered>`
 	}
 }

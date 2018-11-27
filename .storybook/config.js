@@ -4,7 +4,6 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import Vuetify from 'vuetify'
 import theme from '@/plugins/vuetify/vuetify.config.js'
-import StoryCentered from '@/components/StoryCentered'
 
 import '@/plugins/filters/date'
 import '@/plugins/markdown-it'
@@ -29,8 +28,6 @@ Vue.use(Vuex)
 Vue.use(Vuetify, {
   theme
 })
-
-Vue.component('StoryCentered', StoryCentered)
 
 Vue.component('nuxt-link', {
   functional: true,
