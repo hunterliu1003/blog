@@ -27,7 +27,7 @@ export default {
     ThePostPreview,
   },
   asyncData ({ store, params, redirect }) {
-    return store.dispatch('post/getPostsTag', params.tagId)
+    return store.dispatch('post/getPostsByTagId', params.tagId)
       .then(posts => {
         if (posts.length === 0) redirect('/error')
         return { posts }

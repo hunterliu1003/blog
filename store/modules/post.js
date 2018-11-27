@@ -49,7 +49,7 @@ export const actions = {
         return posts
       })
   },
-  getPostsTag ({}, tagId) {
+  getPostsByTagId ({}, tagId) {
     return db.collection('posts').where('isShow', '==', true).where('tags', 'array-contains', tagId).get()
       .then(docs => {
         const posts = []
