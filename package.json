@@ -4,6 +4,9 @@
   "description": "My Nuxt Blog",
   "author": "Hunter",
   "private": true,
+  "engines": {
+    "node": "11.0.0"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "storybook": "start-storybook -p 9002 -c .storybook",
