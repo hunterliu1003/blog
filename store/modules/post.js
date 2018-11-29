@@ -39,16 +39,6 @@ export const actions = {
         }
       })
   },
-  getPostsAdmin () {
-    return db.collection('posts').orderBy('postTime', 'desc').get()
-      .then(docs => {
-        const posts = []
-        docs.forEach(doc => {
-          posts.push({ ...doc.data(), id: doc.id })
-        })
-        return posts
-      })
-  },
   getPostsByTagId ({}, tagId) {
     return db.collection('posts').where('isShow', '==', true).where('tags', 'array-contains', tagId).get()
       .then(docs => {
@@ -62,6 +52,16 @@ export const actions = {
   getPostByPostId ({}, postId) {
     return db.collection('posts').doc(postId).get()
       .then(doc => doc.data())
+  },
+  getPostsAdmin () {
+    return db.collection('posts').orderBy('postTime', 'desc').get()
+      .then(docs => {
+        const posts = []
+        docs.forEach(doc => {
+          posts.push({ ...doc.data(), id: doc.id })
+        })
+        return posts
+      })
   },
   getPosts () {
     return db.collection('posts').where('isShow', '==', true).orderBy('postTime', 'desc').get()
