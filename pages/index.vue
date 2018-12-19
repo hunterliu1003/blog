@@ -29,7 +29,7 @@ export default {
   },
   asyncData ({ store }) {
     return store.dispatch('post/getPostsByPage', {
-      pageNum: 1 ,
+      pageNum: 1,
       perPage: 10,
     })
       .then(data => ({
